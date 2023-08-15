@@ -35,6 +35,7 @@ function onSubmit(evt) {
   evt.preventDefault();
   evt.target.reset();
   storageRemove(storageKey);
+  console.log(formContent);
   formContent = {};
 }
 
