@@ -33,10 +33,12 @@ function updateFormOutput() {
 
 function onSubmit(evt) {
   evt.preventDefault();
-  evt.target.reset();
-  storageRemove(storageKey);
-  console.log(formContent);
-  formContent = {};
+  if (refs.form.elements.email.value && refs.form.elements.message.value) {
+    evt.target.reset();
+    storageRemove(storageKey);
+    console.log(formContent);
+    formContent = {};
+  }
 }
 
 // =======
