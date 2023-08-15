@@ -15,8 +15,8 @@ updateFormOutput();
 function onFormInput(evt) {
   evt.preventDefault();
 
-  const value = evt.target.value;
-  const key = evt.target.name;
+  const value = evt.target.value.trim();
+  const key = evt.target.name.trim();
   formContent[key] = value;
 
   storageSave(storageKey, formContent);
