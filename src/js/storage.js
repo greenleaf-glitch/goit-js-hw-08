@@ -20,8 +20,4 @@ function storageRemove(key) {
   localStorage.removeItem(key);
 }
 
-export default {
-  storageSave,
-  storageLoad,
-  storageRemove,
-};
+export { storageSave, storageLoad, storageRemove };
